@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name="recommendation_system",
-    version="0.0.1",
+    version="0.0.2",
     author="Diogo Leme Jacomini",
     author_email="diogojacomini@outlook.com",
     description="API de Recomendação de Produtos utilizando FastAPI",
