@@ -17,12 +17,12 @@ def create_user(usuario: User) -> User:
     Rota para cadastrar usuários.
 
     Args:
-        usuario (Usuario): O objeto Usuario com o nome a ser cadastrado.
+        usuario (Usuario): O objeto Usuario a ser cadastrado.
 
     Returns:
         Usuario: Um novo usuário com o ID atribuído.
     """
-    return users.set_user(usuario.nome)
+    return users.set_user(usuario.cpf, usuario.nome, usuario.email, usuario.telefone, usuario.endereco, usuario.data_nascimento)
 
 
 @router.get("/usuarios/", response_model=List[User])

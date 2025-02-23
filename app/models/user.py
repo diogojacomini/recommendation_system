@@ -13,10 +13,20 @@ class User(BaseModel):
 
     Attributes:
         id (int): Identificador único do usuário.
+        cpf (str): Identificaor usuário CPF.
         nome (str): Nome do usuário.
+        email (str): Email do usuário.
+        telefone (str): Telefone do usuário.
+        endereço (str): Endereço do usuário.
+        data_nascimento (str): Data de nascimento do usuário no padrão "yyyy-mm-dd"
     """
     id: int
+    cpf: str
     nome: str
+    email: str
+    telefone: str
+    endereco: str
+    data_nascimento: str
 
 
 class Users:
@@ -39,17 +49,29 @@ class Users:
         self.usuarios: List[User] = []
         self.contador_usuario: int = 1
 
-    def set_user(self, nome: str) -> User:
+    def set_user(self, cpf: str, nome: str, email: str, telefone: str, endereco: str, data_nascimento: str) -> User:
         """
         Adiciona um novo usuário à lista de usuários.
 
         Args:
-            nome (str): O nome do usuário a ser adicionado.
+            cpf (str): Identificaor usuário CPF.
+            nome (str): Nome do usuário.
+            email (str): Email do usuário.
+            telefone (str): Telefone do usuário.
+            endereço (str): Endereço do usuário.
+            data_nascimento (str): Data de nascimento do usuário no padrão "yyyy-mm-dd"
 
         Returns:
             Usuario: O objeto Usuario criado com o ID atribuído.
         """
-        novo_usuario = User(id=self.contador_usuario, nome=nome)
+        novo_usuario = User(id=self.contador_usuario,
+                            cpf=cpf,
+                            nome=nome,
+                            email=email,
+                            telefone=telefone,
+                            endereco=endereco,
+                            data_nascimento=data_nascimento)
+
         self.usuarios.append(novo_usuario)
         self.contador_usuario += 1
         return novo_usuario

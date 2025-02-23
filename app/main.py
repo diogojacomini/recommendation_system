@@ -9,13 +9,22 @@ Versão: 0.0.2
 """
 from typing import Dict
 from fastapi import FastAPI
+import asyncio
 from app.routers import user
+from app.synthetic_data.registration import register_users_lote
+
 
 MENSAGEM_HOME: str = "Bem-vindo à API de Recomendação de Produtos!"
 
 # Criando o App
 app = FastAPI()
 app.include_router(user.router)
+
+
+@app.on_event("startup")
+async def on_startup():
+    # Inicia o cadastro de usuários por minuto quando a API iniciar
+    asyncio.create_task(register_users_lote())
 
 
 @app.get("/")
