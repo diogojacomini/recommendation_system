@@ -4,7 +4,7 @@ email, telefone, endereço e data de nascimento, utilizando a biblioteca Faker p
 os dados pessoais e gerando um CPF válido aleatório.
 
 As funções principais incluem:
-- `gerar_pessoa()`: Gera um dicionário com dados sintéticos de uma pessoa.
+- `generate_user()`: Gera um dicionário com dados sintéticos de uma pessoa.
 - `generate_cpf()`: Gera um CPF válido aleatório.
 - `post_register_user()`: Envia uma requisição assíncrona para cadastrar uma pessoa na API.
 - `register_users_lote()`: Simula o cadastro de várias pessoas a cada minuto, enviando as requisições de forma assíncrona.
