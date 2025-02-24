@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "nome": "Samsung Galaxy S23",
+        "descricao": "Smartphone topo de linha da Samsung, com processador Snapdragon 8 Gen 2, tela AMOLED de 6,1\", câmera de 50 MP, e 8 GB de RAM.",
+        "preco": 4999.99,
+        "categoria": "Smartphones",
+        "tags": [
+            "Samsung",
+            "Smartphone",
+            "Android",
+            "Tecnologia",
+            "5G"
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "iPhone 14",
+        "descricao": "Smartphone da Apple com processador A15 Bionic, tela Super Retina XDR de 6,1\", câmera de 12 MP e 6 GB de RAM.",
+        "preco": 7499.0,
+        "categoria": "Smartphones",
+        "tags": [
+            "Apple",
+            "Smartphone",
+            "iOS",
+            "Tecnologia",
+            "5G"
+        ]
+    },
+    {
+        "id": 3,
+        "nome": "Xiaomi Mi 12 Pro",
+        "descricao": "Smartphone da Xiaomi com processador Snapdragon 8 Gen 1, tela AMOLED de 6,73\", câmera principal de 50 MP e 12 GB de RAM.",
+        "preco": 3999.99,
+        "categoria": "Smartphones",
+        "tags": [
+            "Xiaomi",
+            "Smartphone",
+            "Android",
+            "Tecnologia",
+            "5G"
+        ]
+    },
+    {
+        "id": 4,
+        "nome": "MacBook Pro 16\" M1",
+        "descricao": "Laptop da Apple com chip M1 Pro, 16 GB de RAM, tela Retina de 16\", armazenamento SSD de 512 GB e bateria de longa duração.",
+        "preco": 15999.0,
+        "categoria": "Laptops",
+        "tags": [
+            "Apple",
+            "Laptop",
+            "M1",
+            "Tecnologia",
+            "Profissional"
+        ]
+    },
+    {
+        "id": 5,
+        "nome": "Dell XPS 13",
+        "descricao": "Laptop da Dell com processador Intel Core i7, 16 GB de RAM, tela InfinityEdge de 13,4\" e SSD de 512 GB.",
+        "preco": 7999.99,
+        "categoria": "Laptops",
+        "tags": [
+            "Dell",
+            "Laptop",
+            "Intel",
+            "Tecnologia",
+            "Ultrabook"
+        ]
+    },
+    {
+        "id": 6,
+        "nome": "Lenovo ThinkPad X1 Carbon",
+        "descricao": "Laptop empresarial com processador Intel Core i7, 16 GB de RAM, tela de 14\", armazenamento SSD de 512 GB e teclado retroiluminado.",
+        "preco": 9999.99,
+        "categoria": "Laptops",
+        "tags": [
+            "Lenovo",
+            "Laptop",
+            "Intel",
+            "Tecnologia",
+            "Empresarial"
+        ]
+    },
+    {
+        "id": 7,
+        "nome": "AirPods Pro 2",
+        "descricao": "Fones de ouvido sem fio da Apple com cancelamento de ruído ativo, chip H2 e até 6 horas de duração da bateria.",
+        "preco": 1999.0,
+        "categoria": "Acessórios",
+        "tags": [
+            "Apple",
+            "Fones de Ouvido",
+            "Bluetooth",
+            "Tecnologia",
+            "Cancelamento de Ruído"
+        ]
+    },
+    {
+        "id": 8,
+        "nome": "Logitech MX Master 3",
+        "descricao": "Mouse sem fio ergonômico da Logitech com design confortável, 7 botões programáveis e bateria recarregável com até 70 dias de uso.",
+        "preco": 499.99,
+        "categoria": "Acessórios",
+        "tags": [
+            "Logitech",
+            "Mouse",
+            "Ergonômico",
+            "Tecnologia",
+            "Produtividade"
+        ]
+    },
+    {
+        "id": 9,
+        "nome": "Razer BlackWidow V3",
+        "descricao": "Teclado mecânico gamer com switches Razer Green, retroiluminação RGB e design robusto.",
+        "preco": 799.99,
+        "categoria": "Acessórios",
+        "tags": [
+            "Razer",
+            "Teclado",
+            "Gamer",
+            "RGB",
+            "Tecnologia"
+        ]
+    },
+    {
+        "id": 10,
+        "nome": "Apple Watch Series 8",
+        "descricao": "Relógio inteligente com monitoramento de saúde, ECG, GPS integrado e tela Retina sempre ligada.",
+        "preco": 3999.0,
+        "categoria": "Wearables",
+        "tags": [
+            "Apple",
+            "Smartwatch",
+            "Saúde",
+            "Tecnologia",
+            "Monitoramento"
+        ]
+    },
+    {
+        "id": 11,
+        "nome": "Samsung Galaxy Watch 5",
+        "descricao": "Relógio inteligente com monitoramento de saúde, GPS, resistência à água de até 50 metros e 2 dias de bateria.",
+        "preco": 1499.0,
+        "categoria": "Wearables",
+        "tags": [
+            "Samsung",
+            "Smartwatch",
+            "Saúde",
+            "Tecnologia",
+            "Resistência"
+        ]
+    },
+    {
+        "id": 12,
+        "nome": "Fitbit Charge 5",
+        "descricao": "Fitness tracker com monitoramento de atividades físicas, ECG, GPS integrado e até 7 dias de bateria.",
+        "preco": 899.0,
+        "categoria": "Wearables",
+        "tags": [
+            "Fitbit",
+            "Fitness",
+            "Monitoramento",
+            "Tecnologia",
+            "Saúde"
+        ]
+    }
+]
