@@ -84,3 +84,9 @@ class Users:
             List[Usuario]: A lista de objetos Usuario.
         """
         return self.usuarios
+
+    def get_user(self, id_user: int) -> List[User]:
+        user_encontrado = [user for user in self.usuarios if user.id == id_user]
+        if not user_encontrado:
+            print(f"User com id {id_user} não encontrado.")
+        return user_encontrado
