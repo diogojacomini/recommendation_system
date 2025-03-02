@@ -20,9 +20,25 @@ def list_products() -> List[Product]:
     return products.get_products()
 
 
-@router.get("/produtos/{id_producto}", response_model=List[Product])
-def list_product(id_producto: int) -> List[Product]:
-    produtos = products.get_product(id_producto)
-    if not produtos:  # Se a lista estiver vazia
-        raise HTTPException(status_code=404, detail="Produto não encontrado")
+@router.get("/produtos/{id_product}", response_model=List[Product])
+def list_product(id_product: int) -> List[Product]:
+    produtos = products.get_product(id_product)
+    if not produtos:
+        raise HTTPException(status_code=404, detail=f"Produto '{id_product}' não encontrado")
     return produtos
+
+
+@router.put("/produtos/{id_product}", response_model=Product)
+def update_product(id_product: int, updated_product: Product) -> Product:
+    product = products.update_product(id_product, updated_product)
+    if not product:
+        raise HTTPException(status_code=404, detail=f"Produto '{id_product}' não encontrado")
+    return product
+
+
+@router.delete("/produtos/{id_product}", response_model=str)
+def delete_product(id_product: int) -> str:
+    success = products.delete_product(id_product)
+    if not success:
+        raise HTTPException(status_code=404, detail=f"Produto '{id_product}' não encontrado")
+    return f"Produto '{id_product}' deletado com sucesso."

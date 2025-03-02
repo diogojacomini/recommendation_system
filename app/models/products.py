@@ -56,8 +56,28 @@ class Products:
     def get_products(self) -> List[Product]:
         return self.produtos
 
-    def get_product(self, id_producto: int) -> List[Product]:
-        produtos_encontrados = [produto for produto in self.produtos if produto.id == id_producto]
+    def get_product(self, id_product: int) -> List[Product]:
+        produtos_encontrados = [produto for produto in self.produtos if produto.id == id_product]
         if not produtos_encontrados:
-            print(f"Produto com id {id_producto} não encontrado.")
+            print(f"Produto com id {id_product} não encontrado.")
         return produtos_encontrados
+
+    def update_product(self, id_product: int, updated_product: Product) -> Product:
+        for product in self.produtos:
+            if product.id == id_product:
+                product.nome = updated_product.nome
+                product.descricao = updated_product.descricao
+                product.preco = updated_product.preco
+                product.categoria = updated_product.categoria
+                product.tags = updated_product.tags
+                self.write_products()
+                return product
+        return None
+
+    def delete_product(self, id_product: int) -> bool:
+        for i, pr in enumerate(self.produtos):
+            if pr.id == id_product:
+                del self.produtos[i]
+                self.write_products()
+                return True
+        return False
