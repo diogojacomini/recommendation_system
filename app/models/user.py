@@ -90,3 +90,21 @@ class Users:
         if not user_encontrado:
             print(f"User com id {id_user} não encontrado.")
         return user_encontrado
+
+    def update_user(self, id_user: int, updated_user: User) -> User:
+        for user in self.usuarios:
+            if user.id == id_user:
+                user.nome = updated_user.nome
+                user.email = updated_user.email
+                user.telefone = updated_user.telefone
+                user.endereco = updated_user.endereco
+                user.data_nascimento = updated_user.data_nascimento
+                return user
+        return None
+
+    def delete_user(self, id_user: int) -> bool:
+        for i, user in enumerate(self.usuarios):
+            if user.id == id_user:
+                del self.usuarios[i]
+                return True
+        return False

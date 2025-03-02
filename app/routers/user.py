@@ -42,3 +42,19 @@ def get_user(id_user: int) -> List[User]:
     if not user:  # Se a lista estiver vazia
         raise HTTPException(status_code=404, detail="Produto não encontrado")
     return user
+
+
+@router.put("/usuarios/{id_user}", response_model=User)
+def update_user(id_user: int, updated_user: User) -> User:
+    user = users.update_user(id_user, updated_user)
+    if not user:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado")
+    return user
+
+
+@router.delete("/usuarios/{id_user}", response_model=str)
+def delete_user(id_user: int) -> str:
+    success = users.delete_user(id_user)
+    if not success:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado")
+    return "Usuário deletado com sucesso."
